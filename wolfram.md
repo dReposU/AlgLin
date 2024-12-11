@@ -20,7 +20,7 @@
 
 6. Finally create a `.vsnb` file and test the installation
 
- ![alt text](assets\img_sin_plot.png)
+ ![alt text](assets/img_sin_plot.png)
 
 
 
