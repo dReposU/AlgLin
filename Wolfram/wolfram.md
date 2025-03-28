@@ -29,3 +29,9 @@
 - [Fast introduction for programmers](https://www.wolfram.com/language/fast-introduction-for-programmers/en/)
 
 - [An Elementary Introduction to the Wolfram Language Third Edition](https://www.wolfram.com/language/elementary-introduction/3rd-ed/)
+
+# Running .wl in .vsnb
+
+For improved code organization, certain modules are stored in separate `.wl` files. When a `.vsnb` file uses a `.wl` file, it will include a cell containing `<< "full path of the .wl"`. To ensure proper execution, replace that with the actual file path on your system.
+
+![alt text](../assets/img_wl_file.png)
