@@ -32,6 +32,6 @@
 
 # Running .wl in .vsnb
 
-For improved code organization, certain modules are stored in separate `.wl` files. When a `.vsnb` file uses a `.wl` file, it will include a cell containing `<< "full path of the .wl"`. To ensure proper execution, replace that with the actual file path on your system.
+For improved code organization, certain modules are stored in separate `.wl` files. When a `.vsnb` file uses a `.wl` file, it will include a cell containing `<< "full path of the .wl"`. To ensure proper execution, replace that with the actual file path on your system. Use [`path.py`](../path.py) to replace the `\`.
 
 ![alt text](../assets/img_wl_file.png)
