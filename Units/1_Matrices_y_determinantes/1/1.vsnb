@@ -51,7 +51,7 @@
   },
   {
    "kind": 2,
-   "value": "A = {{1, 0}, {0, 0}};\r\nB = {{2, 3}, {4, 5}};\r\nCm = {{2, 3}, {7, 8}}; (* Initially set C equal to B *)\r\n\r\n{A//MatrixForm, B//MatrixForm, Cm//MatrixForm, A.B//MatrixForm, A.Cm//MatrixForm, B == Cm} (* Verify A.B = A.C and B != C *)",
+   "value": "A = {{1, 0}, {0, 0}};\r\nB = {{2, 3}, {4, 5}};\r\nCm = {{2, 3}, {7, 8}}; \r\n\r\n{A//MatrixForm, B//MatrixForm, Cm//MatrixForm, A.B//MatrixForm, A.Cm//MatrixForm, B == Cm} ",
    "languageId": "wolfram",
    "outputs": [
     {
@@ -376,6 +376,39 @@
      "endTime": 1743456154815
     },
     "executionOrder": 107,
+    "success": true
+   }
+  },
+  {
+   "kind": 1,
+   "value": "Ejemplo de que A.B puede ser I pero B.A no.",
+   "languageId": "markdown",
+   "outputs": [],
+   "metadata": {},
+   "executionSummary": {}
+  },
+  {
+   "kind": 2,
+   "value": "A = {\r\n    {1, 0}, \r\n    {0, 1},\r\n    {0, 0}\r\n};\r\nB = {\r\n    {1, 0, 0},\r\n    {0, 1, 0}\r\n};\r\n\r\n{A//MatrixForm, B//MatrixForm, A.B//MatrixForm, B.A//MatrixForm, A.B == B.A} ",
+   "languageId": "wolfram",
+   "outputs": [
+    {
+     "items": [
+      {
+       "data": "<div class=\"wexpr\"><wgraph class=\"resizable\" style=\"width:247.2px;height:36.6px;\" aspect-ratio=\"0.148058\" tabIndex=\"-1\"><img src=\"data:image/png;base64,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\" /></wgraph></div>",
+       "mime": "x-application/wolfram-language-html"
+      }
+     ],
+     "id": "d4ac6cd7-dfa9-4f17-8219-d2766030cb2a"
+    }
+   ],
+   "metadata": {},
+   "executionSummary": {
+    "timing": {
+     "startTime": 1743458082944,
+     "endTime": 1743458083350
+    },
+    "executionOrder": 110,
     "success": true
    }
   }
