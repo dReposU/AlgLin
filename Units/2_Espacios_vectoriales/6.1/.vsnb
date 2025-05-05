@@ -1,0 +1,155 @@
+{
+ "cells": [
+  {
+   "kind": 2,
+   "value": "(* Define two vectors *)\r\nu = {1, 2};\r\nv = {3, 1};\r\n\r\nProjection[u, v]",
+   "languageId": "wolfram",
+   "outputs": [
+    {
+     "items": [
+      {
+       "data": "<div class=\"wexpr\"><wgraph class=\"resizable\" style=\"width:40.2px;height:23.4px;\" aspect-ratio=\"0.58209\" tabIndex=\"-1\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEMAAAAnCAIAAADbzWJoAAAA0HpUWHRSYXcgcHJvZmlsZSB0eXBlIGV4aWYAAHjabU/bDQMhDPtnio4QkuDAOFwPpG7Q8RsOdBVVLRE7zgMI7f3q4THAkYImyygAObRo4eoi08TkSOWKF1RWLe5+YFt+dSt9C2jLP3bfMJnzzyLiKWTc4Fp0DaxFwtOPdebH6uea87aoH/3CejCB7qf/zVWMkRBNPSqTGYrrHFw6ITElQ8cT8MaIk0mfzg1mPgYbHVLH4AA327tbgLhxji/IOEmq84o+GsVcR8keWZjPuzq+8wFh2Vw1BjEcowAAAAlwSFlzAAAOxAAADsQBlSsOGwAAADx0RVh0U29mdHdhcmUAQ3JlYXRlZCB3aXRoIHRoZSBXb2xmcmFtIExhbmd1YWdlIDogd3d3LndvbGZyYW0uY29tXKKmhQAAACF0RVh0Q3JlYXRpb24gVGltZQAyMDI1OjA1OjA1IDE3OjE4OjIyyaGzJQAAApxJREFUWIXtmLGuqjAYxz9uzqRvcGLQUF5DRnkFCAuTCTyAkyMLPICPIIyOTg5AHEycXIG4uTq5OPQOPYfrLaBQCtfcnN9kaPnz/Vvbfv0EjDH8F/xq1FuWZeEbWZa5R0P0gyBgeLeZkyRJ8DeyLHM043meIAiO4zArNHPyiGmaaZpmWcaskBMEwW63wxiPRiNmEXYnBEmSWioAgKZp2+22pQi7E13XXddt+XmOlDiJ4/jJgs4XPUJosVh0HB6NbdtVWwLtJI5jx3EwxkmSlGrli34+nwuCEMcx/3irWa1WGOMwDD3Po9vw36iqimuDELIsq37/l0RRBAC+77/sWfxu2xU/mUxaKvCC3Ylt22ma9r9UqmjgJMsy4QEAwJwynVx5Op0CgK7rDDnER/2ukiTxCr0L5bbr5H34cfJ+/Dh5P2gnXHLbfqAuFB9UW+mZfb/fq9IwABgOh6IoMgd0uVyu12tV63g8HgwGxeeKohwOh8dx/+Mky7LZbFYa8e1222w2VR8TRdEwjLqBFzgej6fTqarVMIzSYdI0zbZt8uPrEUm/0jQFAL7pYNf4vg8P6ebXOiGnrKIobNWA/onjOAxDjDE9Jzm8poWIR1HERa2I67ppmj4+ofcuLhUGAFBVFQDW6zUXtSLn85naZrs6T0zThH5vL105WS6XANDn7YW/E1I0AH63l5o0c1K8bBUhRYMnJymz8nOa3RkRQvl2hBDiVU3lo0ztbvVrK+Rg6mKfraPMs7bSpobbhTK7k/1+DwCfn5/MCpyVX85aKSRPa1Tmq0lN5WIH2onv+3VKgKWjwIU6ylEUFUe85B3LsgAAIVQlhBACACrt4cJLZRJb6Yw1Htd/aOM5zZyQvLCLnbe9cgMnpJBO8eRP2LPyb7KMBUU7xwcjAAAAAElFTkSuQmCC\" /></wgraph></div>",
+       "mime": "x-application/wolfram-language-html"
+      }
+     ],
+     "id": "5bc00465-9f78-4f4e-b1e5-214990a2a82b"
+    }
+   ],
+   "metadata": {},
+   "executionSummary": {}
+  },
+  {
+   "kind": 1,
+   "value": "![alt text](../../../assets/6.1img1.png)",
+   "languageId": "markdown",
+   "outputs": [],
+   "metadata": {},
+   "executionSummary": {}
+  },
+  {
+   "kind": 2,
+   "value": "(* OP stands for orthogonal projection and S for symmetric in respect of P *)\r\nSolveOPandS[P0_, v_, P_] := Block[\r\n    {\r\n    u,\r\n    proj, \r\n    P1,\r\n    P2\r\n    },\r\n    u = P - P0; \r\n    proj = Projection[u, v];\r\n    P1 = P0 + proj; (* P1 = P prime = P' *)\r\n    P2 = 2 * P1 - P; (*P' = 1/2 (P + P'') *) (* P2 = P prime prime = P''*)\r\n    {P1, P2} \r\n]\r\n\r\nSolveOPandS[{2, -1, 3}, {2, 1, 2}, {3, 2, -1}]\r\n%[[1]]",
+   "languageId": "wolfram",
+   "outputs": [
+    {
+     "items": [
+      {
+       "data": "<div class=\"wexpr\"><wgraph class=\"resizable\" style=\"width:170.4px;height:23.4px;\" aspect-ratio=\"0.137324\" tabIndex=\"-1\"><img src=\"data:image/png;base64,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\" /></wgraph></div>",
+       "mime": "x-application/wolfram-language-html"
+      }
+     ],
+     "id": "3cce4ef4-c3f7-4a3f-bb8b-02a7b1790d10"
+    },
+    {
+     "items": [
+      {
+       "data": "<div class=\"wexpr\"><wgraph class=\"resizable\" style=\"width:65.4px;height:23.4px;\" aspect-ratio=\"0.357798\" tabIndex=\"-1\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAG0AAAAnCAIAAACKWVELAAAAz3pUWHRSYXcgcHJvZmlsZSB0eXBlIGV4aWYAAHjabU/bDQMhDPtnio6QBzgwDldA6gYdv+FAp15VS8TGxAFCf79GeEwIU4jJMgpAjlhikeoi08JipnLWE2j7jO9+ENt+dSt9Bfr2j7tvWCz5ZxDJEjpvcK1xB/YgleVzXftj90vN+TZoHOPEfjCBrqf/3Uc1QQJb9BqFzFBc5+DSCUkoGQaegDcymlB8OneYeQw2O7TO4IR0u3f3AHWjzS/oXEmr864eZTXXqsUrK0u7Tud3Pq0aXGnmwWpjAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAPHRFWHRTb2Z0d2FyZQBDcmVhdGVkIHdpdGggdGhlIFdvbGZyYW0gTGFuZ3VhZ2UgOiB3d3cud29sZnJhbS5jb21coqaFAAAAIXRFWHRDcmVhdGlvbiBUaW1lADIwMjU6MDU6MDUgMTc6Mzk6MTG5+YVZAAADQElEQVRoge1aPW/qMBRNnjqwdazYEEYdqy7dECPmJ4ROTEhhrtqFsUsQM/wDyE8oK7E6wMbUgUSoS2eWqlJVuYPf6wPbofFnaJWzYXPvsY7te23fuBhjp4Ay/siZtVot13V7vZ7e0eTCPhgMXAa1Wk3IiYyOYRjOZjMJQy3Qzn57e4v3AQBoNptCTmR07Pf7QRAAACRs1WGaPQzDOI6vr6/FzLAggiAgVgAA3/dFzRVhgR1CCCEUtToREj1Jkru7u+l0KjZXmmCBHSE0m82iKBI15OxrhFBaoB0OhxBCz/NkxqgMC+z39/cAgHq9znb1ej3XdcMw5FtS6zOKorRVTWYpiiLy0/K+tsBOKKbT6YH/+L4fBAHbTut4IDRQQ7esowV2CCEA4Nu/cXmz6hjHcdpe4M6PXlhgJxRZvCnpyCKXfG2O3fd9Nsql/ZNtlLzP/DIghMbjMTlUyUHs3LOL9XotbasOvez1eh2rvTMU61EPCh31oNBRDwod9aDQUQ9oHavVai7j+FlIkoRqOaG6K5UKa/b29rZcLtOcnp6eXlxc6BgeH9vtdrVapfWenZ2dn59LO1+tVtvtNq336uqqVCpRjY1GY7FYUAvuv45JkjSbTe657P39/enpKY2sXC5L69hqtdjHbeoo9/r6eoD94+NDRcfn5+eXl5e03svLS1ZHz/NISWPv5Ylca8jtMsd73s8CeQPdfRn6Gx+r1SrGuNFopL6vFfgHhNB8PscY767HvTzjed58PtdCRqpuCCEt3o6K/fHx8ebmhmqk8zWbieQAIXQcZzKZaPF2VOybzYY91Zg6P3Y6HcdxuNnfAnJgpyKoRKmMC1IX1eLq2NgtvT+SepDDHF/sIDd2StfD63G3+p6llKEX5tiFPGtYj+v1+suyVquJfgSjCHPs6p7l93Wn04njWFd+Px52Oc+q8THfdw1z7KKe5XVst9sqhSFFmGOX9JwliHJDsv08Y5Q9u2duKqbX47dX7K+Q3O127d/8zLFn9IwQ4m95VlpSEc8y4b/sU4DDnoksaedCTnwcjUYY44wF4rxufqbZWc9EloeHB76B9KRl/5DDBMyxy3kWyNdJkux+ie7YvXuZY9fi+ROtgSzYlZzDwwAAAABJRU5ErkJggg==\" /></wgraph></div>",
+       "mime": "x-application/wolfram-language-html"
+      }
+     ],
+     "id": "851c8d88-c15b-4654-b133-60ac04806454"
+    }
+   ],
+   "metadata": {},
+   "executionSummary": {
+    "timing": {
+     "startTime": 1746484750953,
+     "endTime": 1746484751125
+    },
+    "executionOrder": 25,
+    "success": true
+   }
+  },
+  {
+   "kind": 2,
+   "value": "SolveOPandS[{-2, 3, 1}, {1, -1, 3}, {2, 0, -3}]",
+   "languageId": "wolfram",
+   "outputs": [
+    {
+     "items": [
+      {
+       "data": "<div class=\"wexpr\"><wgraph class=\"resizable\" style=\"width:193.2px;height:23.4px;\" aspect-ratio=\"0.121118\" tabIndex=\"-1\"><img src=\"data:image/png;base64,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\" /></wgraph></div>",
+       "mime": "x-application/wolfram-language-html"
+      }
+     ],
+     "id": "6e648a14-6a89-4e1f-8d77-b9d3233e01b9"
+    }
+   ],
+   "metadata": {},
+   "executionSummary": {
+    "timing": {
+     "startTime": 1746484969711,
+     "endTime": 1746484969821
+    },
+    "executionOrder": 26,
+    "success": true
+   }
+  },
+  {
+   "kind": 1,
+   "value": "![alt text](../../../assets/6.1img2.png)",
+   "languageId": "markdown",
+   "outputs": [],
+   "metadata": {},
+   "executionSummary": {}
+  },
+  {
+   "kind": 2,
+   "value": "SolveOPinPlane[Func_, P_, P0_] := Block[\r\n    {u, proj, P1, n},\r\n    \r\n    n = Grad[Func[x, y, z], {x, y, z}];  (* Gradients give the n vector *)\r\n    \r\n    u = P0 - P;\r\n    \r\n    proj = Projection[u, n];\r\n    \r\n    P1 = P + proj;\r\n    \r\n    P1\r\n]\r\n\r\nFunc[x_, y_, z_] := x + 2 y + 3 z - 4\r\nP = {0, 0, 0};\r\nP0 = {0, 2, 0};\r\n\r\nSolveOPinPlane[Func, P, P0]\r\n",
+   "languageId": "wolfram",
+   "outputs": [
+    {
+     "items": [
+      {
+       "data": "<div class=\"wexpr\"><wgraph class=\"resizable\" style=\"width:58.8px;height:23.4px;\" aspect-ratio=\"0.397959\" tabIndex=\"-1\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGIAAAAnCAIAAAB7UgqGAAAAznpUWHRSYXcgcHJvZmlsZSB0eXBlIGV4aWYAAHjabU9BDgMhCLz7ij4BAQd9jtt1k/6gzy+uZNNtOokMDgxoGu/XkR4TnClpsYoGkEObNu6eVFpYnKmd8QQ4avmuJ7bQu0vlyzBC3+66YTHXn0EUG2Ru8Fw0DDFIeOm5r/sW/dxrvQ06tuNEPJhA19P/3lWMUZBNPSqTGZrnNXnqhMJUDAeegDdm7Ez6dB4wcxtsdkifxgkedu8eCeLCPr8g8xTpzhHdmqVeikrm/arO73wAYypcNHCZjhYAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAA8dEVYdFNvZnR3YXJlAENyZWF0ZWQgd2l0aCB0aGUgV29sZnJhbSBMYW5ndWFnZSA6IHd3dy53b2xmcmFtLmNvbVyipoUAAAAhdEVYdENyZWF0aW9uIFRpbWUAMjAyNTowNTowNSAxODowNTo0MT+wxJ0AAANwSURBVGiB7ZoxUuMwFIZfdqjgBgwTmCjHCCljjuAhTVqlZsIFaJwDQEuFXVImbexJkRkqWqRxR0tFQ6Et3uL1SrYjyVJ2YfMVmYkc/5Z/PUlPUjpCCNizjR9Gv+acd0r4qNDFxUWn05lOp86Vp9NpUXPOudG9BjZxzgkhaZoKIYQQhJB+v29Y1S0kSbJcLt1qwmfrAoD4pNfrmUkIW+I4BoDCNScQQqIoIoRQSh3KBkHQUtCs05U5OTmxvreS+XzOGJvNZm5lOefL5fLq6qqNiL1N6/UaAI6Pj9s8voBzfn19jRHqls1mg5/FwGQz8KkBlqYpABBCGoKQMQYAQRC0ieQylNJCzW2ni6IIAApBrHkURWoFACCO40oR2aY0TXVevs5iO7BhypODc5vKJZTSuiCglKoOCnVsurm5WSwWzQGIExw2ixMmkwmldDAYuBIs0+12pZKzs7O6H9/e3uZ5rpYbj039fp8xxhgznlNr4Jwzxu7u7oqxo/g6n8/b6+NUk2VZUZLnuXEqI0VXc48LggBcJwEqPhKCopdJHVyl8tEH+oZmWYa53/n5eVFICHl5eTFrmZ2zWCwwucevFl3BwKbBYCB2sgD04fvWAbcZ+7zpv2JvkxZ7m7TY26TF3iYtZJtcJY1fGnXT7kC6XJnIf3x8NEzSR0dH6oJAn9fX17e3t7qrp6enh4eHdsp21R4Oh5vNRgqX3zZxzkejUaXu+/v74+Nj3fO63e54PNaqeBVPT0/Pz891V8fjsXUb2FU7DEPcaQnD8HcpJuO4jnW7RPi64LZXeVPl19jU6/WEEMPhMEkSu6b7NmRZtlqthBDlaPpjCA/DcLVaOXkYrvXL63KHeBVfr9fqjrA805mezNSBewkPDw9O1HYpnue5Ot37ypsmkwk0boD9s+LVSKOXq+1tQogq7gqv4pXzmPtowsNVfI2vJd6EZFtDNOHeu0TzAYwm/pQtxNtG02w2k24mhIxGI32F3Su7ErfvdEmSMMYuLy+tFXavbC1ub9P9/X0QBD5OjfwpW4sb7IWXweMDPKVwiz/lVuI6A5hK+UjHLf6UNcUrJzHZpjiO687RC7A1tv7MAn/KmuJpmlYGSkWShn86aHD9W4YSvnVdPmScy9b9o6M9/pTbixvbhK7bPexvKbcXN7sTu7ePBven7ET8J9BB91N92148AAAAAElFTkSuQmCC\" /></wgraph></div>",
+       "mime": "x-application/wolfram-language-html"
+      }
+     ],
+     "id": "c069ab3a-3539-41d6-a87a-8f1c595280e2"
+    }
+   ],
+   "metadata": {},
+   "executionSummary": {
+    "timing": {
+     "startTime": 1746486341241,
+     "endTime": 1746486341345
+    },
+    "executionOrder": 126,
+    "success": true
+   }
+  },
+  {
+   "kind": 2,
+   "value": "Func[x_, y_, z_] := x + 2 y + 3 z - 4 (* = 0*)\r\nP = {0, 0, 0};\r\nP0 = {0, 2, 0};\r\nQ0 = {4, 0, 0}; (*4 + 2*0 + 3*0 = 4*)\r\n\r\nSolveOPinPlane[Func, P, P0] == SolveOPinPlane[Func, P, Q0]",
+   "languageId": "wolfram",
+   "outputs": [
+    {
+     "items": [
+      {
+       "data": "<div class=\"wexpr\"><wgraph class=\"resizable\" style=\"width:23.4px;height:12.6px;\" aspect-ratio=\"0.538462\" tabIndex=\"-1\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACcAAAAVCAIAAABKc2DEAAAAz3pUWHRSYXcgcHJvZmlsZSB0eXBlIGV4aWYAAHjabU9bDgMhCPz3FD0Cgg56HLerSW/Q4xdXso1NJxGG4SGE/n6N8JjgSCFlLagAGVJNlZuRQgvLR6qXvcDqubjrIWbXm0n5m0B3/dh1hQ8sP4OIF5H5g3FJ3uCDhJce24oPr+dWyjZoHOOCL0yge/W/cRJlZERNZhOTKqrxEoyaQ2bKioEnYIURJ1N6mu9QtTborJA2Gye4617dA8SEc54g82Vp5t1aa5RycZgVKXze2XnOB2DyXDlyVdoDAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAPHRFWHRTb2Z0d2FyZQBDcmVhdGVkIHdpdGggdGhlIFdvbGZyYW0gTGFuZ3VhZ2UgOiB3d3cud29sZnJhbS5jb21coqaFAAAAIXRFWHRDcmVhdGlvbiBUaW1lADIwMjU6MDU6MDUgMTg6MDY6MzgbmEUQAAABAUlEQVRIie2Vz42FIBDGv9lsFR6FGjxRgCV49Io1WIHxLB0oNXCF2AW0wh5ICHn7NuvmPc0e/E5MZoZfMn+AYoy4XB/XI2/qRVTOOT1TCOEsbCwkpWSMxfP1X/uqtSYiAG3bpsoPw5Bczjkics7lYCKapimbIYSyZX+g5uv6vo8xWmuVUiXpJ4UQGGPW2ty+DD5K3bat6zoAQggA+77/mjLPs5QyxQNYlgWA1hrA50Fq0zT5fPARNcZ475VS313nTpOU8mF6U8FeolZVVZoP+805N8Y8TXyJWtc1gHVdk8kYK73jOHrv88C/jQogjXRaDGttCRZClN5yeej+X2/q2/QF40ffNyNlVmYAAAAASUVORK5CYII=\" /></wgraph></div>",
+       "mime": "x-application/wolfram-language-html"
+      }
+     ],
+     "id": "51a37e37-0b29-48b1-a5af-06780c92ceb1"
+    }
+   ],
+   "metadata": {},
+   "executionSummary": {
+    "timing": {
+     "startTime": 1746486398449,
+     "endTime": 1746486398554
+    },
+    "executionOrder": 131,
+    "success": true
+   }
+  },
+  {
+   "kind": 2,
+   "value": "(* Define the projection function *)\r\nSolveOPinPlane[Func_, P_] := Block[ (*without P0. Func in progress*)\r\n    {u, proj, P1, n, P0},\r\n    \r\n    (* Step 1: Get the n vector to the plane (coefficients of the plane equation) *)\r\n    n = Grad[Func[x, y, z], {x, y, z}];  (* Gradients give the n vector *)\r\n    (* working *)\r\n    \r\n    (* Step 2: Choose an arbitrary point on the plane (P0). Let's solve Func = 0 for P0. *)\r\n    Solve[Func[]]\r\n    P0 = {x, y, z} /. Solve[Func[x, y, z] == 0, {x, y, z}][[1]];  (* Find a point on the plane *)\r\n    \r\n    (* Step 3: Calculate vector u = P0 - P *)\r\n    u = P0 - P;\r\n    \r\n    (* Step 4: Project u onto the n vector to get the displacement to the plane *)\r\n    proj = Projection[u, n];\r\n    \r\n    (* Step 5: Calculate the new point P1 on the plane *)\r\n    P1 = P + proj;\r\n    \r\n    (* Return the projected point *)\r\n    P1\r\n]",
+   "languageId": "wolfram",
+   "outputs": [],
+   "metadata": {},
+   "executionSummary": {}
+  }
+ ]
+}
