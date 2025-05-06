@@ -51,14 +51,7 @@
     }
    ],
    "metadata": {},
-   "executionSummary": {
-    "timing": {
-     "startTime": 1746484750953,
-     "endTime": 1746484751125
-    },
-    "executionOrder": 25,
-    "success": true
-   }
+   "executionSummary": {}
   },
   {
    "kind": 2,
@@ -76,14 +69,7 @@
     }
    ],
    "metadata": {},
-   "executionSummary": {
-    "timing": {
-     "startTime": 1746484969711,
-     "endTime": 1746484969821
-    },
-    "executionOrder": 26,
-    "success": true
-   }
+   "executionSummary": {}
   },
   {
    "kind": 1,
@@ -95,26 +81,26 @@
   },
   {
    "kind": 2,
-   "value": "SolveOPinPlane[Func_, P_, P0_] := Block[\r\n    {u, proj, P1, n},\r\n    \r\n    n = Grad[Func[x, y, z], {x, y, z}];  (* Gradients give the n vector *)\r\n    \r\n    u = P0 - P;\r\n    \r\n    proj = Projection[u, n];\r\n    \r\n    P1 = P + proj;\r\n    \r\n    P1\r\n]\r\n\r\nFunc[x_, y_, z_] := x + 2 y + 3 z - 4\r\nP = {0, 0, 0};\r\nP0 = {0, 2, 0};\r\n\r\nSolveOPinPlane[Func, P, P0]\r\n",
+   "value": "SolveOPinPlane[Func_, P_, P0_] := Block[\r\n    {u, proj, P1, n},\r\n    \r\n    n = Grad[Func[x, y, z], {x, y, z}];  (* Gradients give the n vector *)\r\n    (* n = -n; *)\r\n    \r\n    u = P0 - P;\r\n    \r\n    proj = Projection[u, n];\r\n    \r\n    P1 = P + proj;\r\n    \r\n    P1\r\n]\r\n\r\nFunc[x_, y_, z_] := x + 2 y + 3 z - 4\r\nP = {0, 0, 0};\r\nP0 = {0, 2, 0};\r\n\r\nSolveOPinPlane[Func, P, P0]\r\n",
    "languageId": "wolfram",
    "outputs": [
     {
      "items": [
       {
-       "data": "<div class=\"wexpr\"><wgraph class=\"resizable\" style=\"width:58.8px;height:23.4px;\" aspect-ratio=\"0.397959\" tabIndex=\"-1\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGIAAAAnCAIAAAB7UgqGAAAAznpUWHRSYXcgcHJvZmlsZSB0eXBlIGV4aWYAAHjabU9BDgMhCLz7ij4BAQd9jtt1k/6gzy+uZNNtOokMDgxoGu/XkR4TnClpsYoGkEObNu6eVFpYnKmd8QQ4avmuJ7bQu0vlyzBC3+66YTHXn0EUG2Ru8Fw0DDFIeOm5r/sW/dxrvQ06tuNEPJhA19P/3lWMUZBNPSqTGZrnNXnqhMJUDAeegDdm7Ez6dB4wcxtsdkifxgkedu8eCeLCPr8g8xTpzhHdmqVeikrm/arO73wAYypcNHCZjhYAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAA8dEVYdFNvZnR3YXJlAENyZWF0ZWQgd2l0aCB0aGUgV29sZnJhbSBMYW5ndWFnZSA6IHd3dy53b2xmcmFtLmNvbVyipoUAAAAhdEVYdENyZWF0aW9uIFRpbWUAMjAyNTowNTowNSAxODowNTo0MT+wxJ0AAANwSURBVGiB7ZoxUuMwFIZfdqjgBgwTmCjHCCljjuAhTVqlZsIFaJwDQEuFXVImbexJkRkqWqRxR0tFQ6Et3uL1SrYjyVJ2YfMVmYkc/5Z/PUlPUjpCCNizjR9Gv+acd0r4qNDFxUWn05lOp86Vp9NpUXPOudG9BjZxzgkhaZoKIYQQhJB+v29Y1S0kSbJcLt1qwmfrAoD4pNfrmUkIW+I4BoDCNScQQqIoIoRQSh3KBkHQUtCs05U5OTmxvreS+XzOGJvNZm5lOefL5fLq6qqNiL1N6/UaAI6Pj9s8voBzfn19jRHqls1mg5/FwGQz8KkBlqYpABBCGoKQMQYAQRC0ieQylNJCzW2ni6IIAApBrHkURWoFACCO40oR2aY0TXVevs5iO7BhypODc5vKJZTSuiCglKoOCnVsurm5WSwWzQGIExw2ixMmkwmldDAYuBIs0+12pZKzs7O6H9/e3uZ5rpYbj039fp8xxhgznlNr4Jwzxu7u7oqxo/g6n8/b6+NUk2VZUZLnuXEqI0VXc48LggBcJwEqPhKCopdJHVyl8tEH+oZmWYa53/n5eVFICHl5eTFrmZ2zWCwwucevFl3BwKbBYCB2sgD04fvWAbcZ+7zpv2JvkxZ7m7TY26TF3iYtZJtcJY1fGnXT7kC6XJnIf3x8NEzSR0dH6oJAn9fX17e3t7qrp6enh4eHdsp21R4Oh5vNRgqX3zZxzkejUaXu+/v74+Nj3fO63e54PNaqeBVPT0/Pz891V8fjsXUb2FU7DEPcaQnD8HcpJuO4jnW7RPi64LZXeVPl19jU6/WEEMPhMEkSu6b7NmRZtlqthBDlaPpjCA/DcLVaOXkYrvXL63KHeBVfr9fqjrA805mezNSBewkPDw9O1HYpnue5Ot37ypsmkwk0boD9s+LVSKOXq+1tQogq7gqv4pXzmPtowsNVfI2vJd6EZFtDNOHeu0TzAYwm/pQtxNtG02w2k24mhIxGI32F3Su7ErfvdEmSMMYuLy+tFXavbC1ub9P9/X0QBD5OjfwpW4sb7IWXweMDPKVwiz/lVuI6A5hK+UjHLf6UNcUrJzHZpjiO687RC7A1tv7MAn/KmuJpmlYGSkWShn86aHD9W4YSvnVdPmScy9b9o6M9/pTbixvbhK7bPexvKbcXN7sTu7ePBven7ET8J9BB91N92148AAAAAElFTkSuQmCC\" /></wgraph></div>",
+       "data": "<div class=\"wexpr\"><wgraph class=\"resizable\" style=\"width:58.8px;height:23.4px;\" aspect-ratio=\"0.397959\" tabIndex=\"-1\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGIAAAAnCAIAAAB7UgqGAAAAznpUWHRSYXcgcHJvZmlsZSB0eXBlIGV4aWYAAHjabU9bDsMgDPvnFDtCSIIDx6ErlXaDHX+hRNU6zRJ2cF6Qxvt1pMcEZ0parKIB5NCmjbsHlRaWZmonnwBHLt/9xBZ+d6t8NYzwt7tvWMr1ZxDFBpkbPBaNhhgkvPzc132Leu613gYd23EiHkyg6+l/7yrGKMimzspkhuZxTR66oDAVw4En4IUZO5M+XQfMvA02K6TPxgkedq8eCeLGPr8g8xTprsG83O4sziqZ9ys7v/MBYmxcLWIXZzAAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAA8dEVYdFNvZnR3YXJlAENyZWF0ZWQgd2l0aCB0aGUgV29sZnJhbSBMYW5ndWFnZSA6IHd3dy53b2xmcmFtLmNvbVyipoUAAAAhdEVYdENyZWF0aW9uIFRpbWUAMjAyNTowNTowNSAyMDoyMzo0Md17gaUAAANwSURBVGiB7ZoxUuMwFIZfdqjgBgwTmCjHCCljjuAhTVqlZsIFaJwDQEuFXVImbexJkRkqWqRxR0tFQ6Et3uL1SrYjyVJ2YfMVmYkc/5Z/PUlPUjpCCNizjR9Gv+acd0r4qNDFxUWn05lOp86Vp9NpUXPOudG9BjZxzgkhaZoKIYQQhJB+v29Y1S0kSbJcLt1qwmfrAoD4pNfrmUkIW+I4BoDCNScQQqIoIoRQSh3KBkHQUtCs05U5OTmxvreS+XzOGJvNZm5lOefL5fLq6qqNiL1N6/UaAI6Pj9s8voBzfn19jRHqls1mg5/FwGQz8KkBlqYpABBCGoKQMQYAQRC0ieQylNJCzW2ni6IIAApBrHkURWoFACCO40oR2aY0TXVevs5iO7BhypODc5vKJZTSuiCglKoOCnVsurm5WSwWzQGIExw2ixMmkwmldDAYuBIs0+12pZKzs7O6H9/e3uZ5rpYbj039fp8xxhgznlNr4Jwzxu7u7oqxo/g6n8/b6+NUk2VZUZLnuXEqI0VXc48LggBcJwEqPhKCopdJHVyl8tEH+oZmWYa53/n5eVFICHl5eTFrmZ2zWCwwucevFl3BwKbBYCB2sgD04fvWAbcZ+7zpv2JvkxZ7m7TY26TF3iYtZJtcJY1fGnXT7kC6XJnIf3x8NEzSR0dH6oJAn9fX17e3t7qrp6enh4eHdsp21R4Oh5vNRgqX3zZxzkejUaXu+/v74+Nj3fO63e54PNaqeBVPT0/Pz891V8fjsXUb2FU7DEPcaQnD8HcpJuO4jnW7RPi64LZXeVPl19jU6/WEEMPhMEkSu6b7NmRZtlqthBDlaPpjCA/DcLVaOXkYrvXL63KHeBVfr9fqjrA805mezNSBewkPDw9O1HYpnue5Ot37ypsmkwk0boD9s+LVSKOXq+1tQogq7gqv4pXzmPtowsNVfI2vJd6EZFtDNOHeu0TzAYwm/pQtxNtG02w2k24mhIxGI32F3Su7ErfvdEmSMMYuLy+tFXavbC1ub9P9/X0QBD5OjfwpW4sb7IWXweMDPKVwiz/lVuI6A5hK+UjHLf6UNcUrJzHZpjiO687RC7A1tv7MAn/KmuJpmlYGSkWShn86aHD9W4YSvnVdPmScy9b9o6M9/pTbixvbhK7bPexvKbcXN7sTu7ePBven7ET8J9BB91N92148AAAAAElFTkSuQmCC\" /></wgraph></div>",
        "mime": "x-application/wolfram-language-html"
       }
      ],
-     "id": "c069ab3a-3539-41d6-a87a-8f1c595280e2"
+     "id": "26274f49-f3c8-4d06-b434-92a57be96002"
     }
    ],
    "metadata": {},
    "executionSummary": {
     "timing": {
-     "startTime": 1746486341241,
-     "endTime": 1746486341345
+     "startTime": 1746494621214,
+     "endTime": 1746494621342
     },
-    "executionOrder": 126,
+    "executionOrder": 26,
     "success": true
    }
   },
@@ -134,22 +120,22 @@
     }
    ],
    "metadata": {},
-   "executionSummary": {
-    "timing": {
-     "startTime": 1746486398449,
-     "endTime": 1746486398554
-    },
-    "executionOrder": 131,
-    "success": true
-   }
+   "executionSummary": {}
   },
   {
    "kind": 2,
-   "value": "(* Define the projection function *)\r\nSolveOPinPlane[Func_, P_] := Block[ (*without P0. Func in progress*)\r\n    {u, proj, P1, n, P0},\r\n    \r\n    (* Step 1: Get the n vector to the plane (coefficients of the plane equation) *)\r\n    n = Grad[Func[x, y, z], {x, y, z}];  (* Gradients give the n vector *)\r\n    (* working *)\r\n    \r\n    (* Step 2: Choose an arbitrary point on the plane (P0). Let's solve Func = 0 for P0. *)\r\n    Solve[Func[]]\r\n    P0 = {x, y, z} /. Solve[Func[x, y, z] == 0, {x, y, z}][[1]];  (* Find a point on the plane *)\r\n    \r\n    (* Step 3: Calculate vector u = P0 - P *)\r\n    u = P0 - P;\r\n    \r\n    (* Step 4: Project u onto the n vector to get the displacement to the plane *)\r\n    proj = Projection[u, n];\r\n    \r\n    (* Step 5: Calculate the new point P1 on the plane *)\r\n    P1 = P + proj;\r\n    \r\n    (* Return the projected point *)\r\n    P1\r\n]",
+   "value": "SolveP0[Func_] := Block[\r\n    {x, y, z},\r\n    (*\r\n    given a func defined as a*x + b*y + c*z + d it must be equal to 0. \r\n    a or b or c or d can be 0 but neither of a, b and c must not be 0.\r\n    \r\n    *)\r\n\r\n\r\n    {x, y, z}\r\n]\r\n\r\n(* Define the projection function *)\r\nSolveOPinPlane[Func_, P_] := Block[ (*without P0. Func in progress*)\r\n    {u, proj, P1, n, P0},\r\n    \r\n    (* Step 1: Get the n vector to the plane (coefficients of the plane equation) *)\r\n    n = Grad[Func[x, y, z], {x, y, z}];  (* Gradients give the n vector *)\r\n    (* working *)\r\n    \r\n    (* Step 2: Choose an arbitrary point on the plane (P0). Let's solve Func = 0 for P0. *)\r\n    Solve[Func[]]\r\n    P0 = {x, y, z} /. Solve[Func[x, y, z] == 0, {x, y, z}][[1]];  (* Find a point on the plane *)\r\n    \r\n    (* Step 3: Calculate vector u = P0 - P *)\r\n    u = P0 - P;\r\n    \r\n    (* Step 4: Project u onto the n vector to get the displacement to the plane *)\r\n    proj = Projection[u, n];\r\n    \r\n    (* Step 5: Calculate the new point P1 on the plane *)\r\n    P1 = P + proj;\r\n    \r\n    (* Return the projected point *)\r\n    P1\r\n]",
    "languageId": "wolfram",
    "outputs": [],
    "metadata": {},
-   "executionSummary": {}
+   "executionSummary": {
+    "timing": {
+     "startTime": 1746496926889,
+     "endTime": 1746496926922
+    },
+    "executionOrder": 29,
+    "success": true
+   }
   }
  ]
 }
