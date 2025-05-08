@@ -1,6 +1,14 @@
 {
  "cells": [
   {
+   "kind": 1,
+   "value": "# To do\r\n+ [ ] Ajuste cuadrático, potencial y exponencial (si se puede generalizado en una única función: ecuación, show ecuación)",
+   "languageId": "markdown",
+   "outputs": [],
+   "metadata": {},
+   "executionSummary": {}
+  },
+  {
    "kind": 2,
    "value": "A = {\r\n    {1, -6},\r\n    {1, -2},\r\n    {1, 1},\r\n    {1, 7}\r\n};\r\n\r\nB = Transpose[{-1, 2, 1, 6}];\r\n\r\nA // MatrixForm\r\nB // MatrixForm",
    "languageId": "wolfram",
@@ -25,14 +33,7 @@
     }
    ],
    "metadata": {},
-   "executionSummary": {
-    "timing": {
-     "startTime": 1746644463574,
-     "endTime": 1746644463791
-    },
-    "executionOrder": 204,
-    "success": true
-   }
+   "executionSummary": {}
   },
   {
    "kind": 2,
@@ -68,14 +69,7 @@
     }
    ],
    "metadata": {},
-   "executionSummary": {
-    "timing": {
-     "startTime": 1746644752151,
-     "endTime": 1746644752380
-    },
-    "executionOrder": 220,
-    "success": true
-   }
+   "executionSummary": {}
   },
   {
    "kind": 2,
@@ -93,18 +87,27 @@
     }
    ],
    "metadata": {},
-   "executionSummary": {
-    "timing": {
-     "startTime": 1746644565229,
-     "endTime": 1746644565356
-    },
-    "executionOrder": 218,
-    "success": true
-   }
+   "executionSummary": {}
+  },
+  {
+   "kind": 1,
+   "value": "![alt text](../../../assets/5.1img1.png)",
+   "languageId": "markdown",
+   "outputs": [],
+   "metadata": {},
+   "executionSummary": {}
+  },
+  {
+   "kind": 1,
+   "value": "+ [ConstantArray func.](https://reference.wolfram.com/language/ref/ConstantArray.html?q=ConstantArray): [c, n] generates a list of n copies of the element c.",
+   "languageId": "markdown",
+   "outputs": [],
+   "metadata": {},
+   "executionSummary": {}
   },
   {
    "kind": 2,
-   "value": "(* The equation applying least squares to a set of points*)\r\n\r\n(*\r\n\r\n\r\n\r\n    NEED TO BE STUDIED IN DEPTH\r\n\r\n\r\n\r\n*)\r\nEqLeastSqrts[points_] := Module[{A, B, m, b, x},\r\n  (* Construct matrix A where each row is {1, x_i} *)\r\n  A = Transpose[{ConstantArray[1, Length[points]], points[[All, 1]]}];\r\n  \r\n  (* Construct matrix B where each row is y_i *)\r\n  B = points[[All, 2]];\r\n  \r\n  (* Apply the LeastSquares method *)\r\n  x = LeastSquares[A, B];\r\n  \r\n  (* Extract b and m *)\r\n  {b, m} = x;\r\n  \r\n  (* Return the equation of the line *)\r\n  b + m*# & (* A function that returns b + mx for any input x *)\r\n]\r\n\r\n(*\r\n\r\n\r\n\r\n    NEED TO BE STUDIED IN DEPTH\r\n\r\n\r\n\r\n*)\r\n\r\n(* Test it with the given points *)\r\npoints = {{1, 0.2}, {2, 0.25}, {3, 0.2}, {4, 0.35}, {5, 0.45}, {6, 0.4}};\r\neq = EqLeastSqrts[points];\r\neq[2]\r\neq[2] == (EqLeastSqrts[points])[2]\r\n",
+   "value": "(* The equation applying least squares to a set of points*)\r\n\r\nEqLeastSqrts[points_] := Module[{A, B, m, b, x},\r\n  (* Construct matrix A where each row is {1, x_i} *)\r\n  A = Transpose[{ConstantArray[1, Length[points]], points[[All, 1]]}];\r\n  \r\n  (* Construct matrix B where each row is y_i *)\r\n  B = points[[All, 2]]; (* Selects All points and its second element. The output is a list {...}*)\r\n  \r\n  (* Apply the LeastSquares method *)\r\n  x = LeastSquares[A, B];\r\n  \r\n  (* Extract b and m *)\r\n  {b, m} = x;\r\n  \r\n  (* Return the equation of the line *)\r\n  b + m*# & (* A function that returns b + mx for any input x *)\r\n]\r\n\r\n(* Test it with the given points *)\r\npoints = {{1, 0.2}, {2, 0.25}, {3, 0.2}, {4, 0.35}, {5, 0.45}, {6, 0.4}};\r\neq = EqLeastSqrts[points];\r\neq[2] (*0.23333....*)\r\neq[2] == (EqLeastSqrts[points])[2] (* True *)\r\n",
    "languageId": "wolfram",
    "outputs": [
     {
@@ -114,25 +117,83 @@
        "mime": "text/html"
       }
      ],
-     "id": "570a1cf4-8641-4c72-847f-674e7af39a68"
+     "id": "b3ab1757-d74b-415b-b328-e5dc15bc9e1d"
     },
     {
      "items": [
       {
-       "data": "<div class=\"wexpr\"><wgraph class=\"resizable\" style=\"width:23.4px;height:12.6px;\" aspect-ratio=\"0.538462\" tabIndex=\"-1\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACcAAAAVCAIAAABKc2DEAAAAz3pUWHRSYXcgcHJvZmlsZSB0eXBlIGV4aWYAAHjabU9bDgMhCPz3FD0Cggx6HLerSW/Q4xdXs41NJxGG4SGE9n718BjgSCGpZRSAHKmkwtVJponpI5XLXmBbubjrIerSq0v6TaAt/dh1wxqYfwYRTyLjB+eSVsMaJDz1WGd8rHquOW+D+tEvrIUJdK/+N05iDEW05DYxmaE4z8GpOyiTGjqegBdGnEzp6b7BzNtgo0LqaBzgZnt1CxAXznGCjKdS3U9r3hovriJu2ZXzzo5zPmD2XDhu6p95AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAPHRFWHRTb2Z0d2FyZQBDcmVhdGVkIHdpdGggdGhlIFdvbGZyYW0gTGFuZ3VhZ2UgOiB3d3cud29sZnJhbS5jb21coqaFAAAAIXRFWHRDcmVhdGlvbiBUaW1lADIwMjU6MDU6MDcgMTU6NTM6MjcIIKd/AAABAUlEQVRIie2Vz42FIBDGv9lsFR6FGjxRgCV49Io1WIHxLB0oNXCF2AW0wh5ICHn7NuvmPc0e/E5MZoZfMn+AYoy4XB/XI2/qRVTOOT1TCOEsbCwkpWSMxfP1X/uqtSYiAG3bpsoPw5Bczjkics7lYCKapimbIYSyZX+g5uv6vo8xWmuVUiXpJ4UQGGPW2ty+DD5K3bat6zoAQggA+77/mjLPs5QyxQNYlgWA1hrA50Fq0zT5fPARNcZ475VS313nTpOU8mF6U8FeolZVVZoP+805N8Y8TXyJWtc1gHVdk8kYK73jOHrv88C/jQogjXRaDGttCRZClN5yeej+X2/q2/QF40ffNyNlVmYAAAAASUVORK5CYII=\" /></wgraph></div>",
+       "data": "<div class=\"wexpr\"><wgraph class=\"resizable\" style=\"width:23.4px;height:12.6px;\" aspect-ratio=\"0.538462\" tabIndex=\"-1\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACcAAAAVCAIAAABKc2DEAAAA0HpUWHRSYXcgcHJvZmlsZSB0eXBlIGV4aWYAAHjabU/bDQMhDPtnio4QEnBgHK4HUjfo+E0OdBVVLRE7zgMI/f0a4eHgSCFlLagAGVJNlZuJQhOTI9UrXmBdtbj7IeblN7Pyt4C+/GP3FWth+VlEPIX4DaYlrYG1SHj6sc38WP3cStkWjWNcWA8m0P30v3kSZWRETRYTkyqq6RJMGiEzZcXAE7DGiJMpPY07VG0M6h3SfNDBXffuHiBmnP4F8ZOlGc9YbDQaN8vrFZXPu+rf+QBhRlw9bUg5agAAAAlwSFlzAAAOxAAADsQBlSsOGwAAADx0RVh0U29mdHdhcmUAQ3JlYXRlZCB3aXRoIHRoZSBXb2xmcmFtIExhbmd1YWdlIDogd3d3LndvbGZyYW0uY29tXKKmhQAAACF0RVh0Q3JlYXRpb24gVGltZQAyMDI1OjA1OjA4IDEwOjU5OjU3i++l9gAAAQFJREFUSIntlc+NhSAQxr/ZbBUehRo8UYAlePSKNViB8SwdKDVwhdgFtMIeSAh5+zbr5j3NHvxOTGaGXzJ/gGKMuFwf1yNv6kVUzjk9UwjhLGwsJKVkjMXz9V/7qrUmIgBt26bKD8OQXM45InLO5WAimqYpmyGEsmV/oObr+r6PMVprlVIl6SeFEBhj1trcvgw+St22res6AEIIAPu+/5oyz7OUMsUDWJYFgNYawOdBatM0+XzwETXGeO+VUt9d506TlPJhelPBXqJWVVWaD/vNOTfGPE18iVrXNYB1XZPJGCu94zh67/PAv40KII10WgxrbQkWQpTecnno/l9v6tv0BeNH3zcjZVZmAAAAAElFTkSuQmCC\" /></wgraph></div>",
        "mime": "x-application/wolfram-language-html"
       }
      ],
-     "id": "1f44df8a-d8cc-48a5-bbc0-39e9e3738958"
+     "id": "5655ae10-2de6-4b02-907b-da8ac7ac1d8a"
     }
    ],
    "metadata": {},
    "executionSummary": {
     "timing": {
-     "startTime": 1746651206935,
-     "endTime": 1746651207116
+     "startTime": 1746719997432,
+     "endTime": 1746719997751
     },
-    "executionOrder": 313,
+    "executionOrder": 22,
+    "success": true
+   }
+  },
+  {
+   "kind": 2,
+   "value": "A = {{6, 21}, {21, 91}};\r\nB = {{1.85}, {7.35}};\r\nLinearSolve[A, B] // MatrixForm",
+   "languageId": "wolfram",
+   "outputs": [
+    {
+     "items": [
+      {
+       "data": "<div class=\"wexpr\"><wgraph class=\"resizable\" style=\"width:63.0px;height:22.8px;\" aspect-ratio=\"0.361905\" tabIndex=\"-1\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGkAAAAmCAIAAABI7iLUAAAA0HpUWHRSYXcgcHJvZmlsZSB0eXBlIGV4aWYAAHjabU9BDsMgDLvzij0hJMGB59CVSvvBnr+koGqdZtTEGDuFNN6vIz0CnClpsYoGkEObNu5OKk3Mnqmd9QTaOst3PTGW3l0qX4Gx9O2u2/Jz/RlEPInEH5yLrsAaJDz13Od+W37utd4GHdtxYl2YQNfV/+5VjFGQTb0qkxma85qcekNhKoYDT8CNGTuTPr0PmHkMFg7pEQzwsLt7JIgLezxB4ivSvc9aPZp9BYdXFuX9Oo3nfABr3Vw44ZRgTwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAADx0RVh0U29mdHdhcmUAQ3JlYXRlZCB3aXRoIHRoZSBXb2xmcmFtIExhbmd1YWdlIDogd3d3LndvbGZyYW0uY29tXKKmhQAAACF0RVh0Q3JlYXRpb24gVGltZQAyMDI1OjA1OjA4IDExOjA2OjI0a1P2GQAAA8RJREFUaIHtWkFuqzAQHb7+KaIoQjinqJIsuigcoIukNyDrqqteAA7QSl1lZ46QdsGGKKcICKEo1/BfWPXn22MDDlTqL29RqR4/24zHMxOPHcYYjLDCL7S1KIrtdqvjbLdb5xOHw6HTfPP53HGcJEnqjYfDwakhjuO6NAiCurQXYlEUdZHhY+M4llb7FwxDFEV5nqMi3/cJIaIbAGRZhvZUxwQASin/q+uW5zkARFGESsMw1K3ZmsgYA4AwDHVSnQgfTtc7yzIAqKuVEGKYVYBS6vu+GMGgO8aY7/u8s24But2yJoZhKAwClaLtyJktisJ1XdRIj8cjIcTzPHFk8jx/fX3VGbzAer3e7/eN3QTEFCgmk0nvxPl8rhM9PDzgx1ZVJ6W0zcaK0wf/WqIZjXZnHtBg5tZEs0kyxvI8R7mI7sIwNDg7rrsoiriR96U73s6h+izf93WbbU3k/pGj0e2grgA/s2bLD4IgTdPT6WTo0xWLxUKs6e3tTTpB+/2eiyilUpi2JnqeJ4g87BqWhyoEz1EMQ7y/v3ueJ5xXVVV1D9gLdrtdnudo9rNer33f3+12/RJfXl4AQJuLALiuqw4r664oitvbW90Qq9UKAB4fH0VLmqZ3d3e6/tdgiIBgJk6nU51oNpudz2e5VTrDlFJzAkEIkfI7ydnxRnOuYJ4C9A4InfF6IiFEt2CxbNWZIrprzHUNDph9ZqFSulR3zALSHghIC6iLpC+0JvIQJ2DeS6YJtfLHR1HU8nfCT4OqO9nflWVp8Bc/GUVRSC3d4uyIOpA422/C8R9jtLu2UE1q1F1bjP6uT4y6s8eoO3uMumuLMVbYozlWeJ6ndhqB4kvtzro4qSNKNUbHcYIgGGDhOGTdua57uVyGmCkIgo+PD/4rOoqi5XLZUn2NxPrNUqeK0rWQ7gba3EFZwLo4aSaq0oGA3kHJdjedTpEL0qthXZy0JvaLy+Wi1l1l3U0mk6qqep87TVNRhUmSZLlc8tvHxrjUhkgIaXwacSXO5/NsNpMakThbluVAKwCAOI6fn59Z9wdEKLFeJOP2OFCsqKpKrWb8VvsNl6PwD7MoTrYhep5HKd1sNkNco5Vl+fT0JDUiOcoQ93fWxUkL4hB5AmpPiO5Wq1XXl2GNsC5OdiJyT71YLK5crQp8q9B4rHuJdQ2si5ONRI7G12nWyLIMHRbxdwOFi9PpxB8Tij2TOvBJVadmICZJstlsxL/qmL3geDze398jAlTTQ9jd90WH93cAcHNzM1yu9L0QxzH3uSocNr7VtsUfLc407jFUeNMAAAAASUVORK5CYII=\" /></wgraph></div>",
+       "mime": "x-application/wolfram-language-html"
+      }
+     ],
+     "id": "45f9e47d-0cbf-4c75-a991-24c46c743ff5"
+    }
+   ],
+   "metadata": {},
+   "executionSummary": {
+    "timing": {
+     "startTime": 1746720384000,
+     "endTime": 1746720384188
+    },
+    "executionOrder": 28,
+    "success": true
+   }
+  },
+  {
+   "kind": 1,
+   "value": "+ [Row func.](https://reference.wolfram.com/language/ref/Row.html?q=Row)",
+   "languageId": "markdown",
+   "outputs": [],
+   "metadata": {},
+   "executionSummary": {}
+  },
+  {
+   "kind": 2,
+   "value": "(* Matricial equation *)\r\nShowMatEqLS[A_, B_] := Module[\r\n    {AT},\r\n    AT = Transpose[A]; (* Transpose of A *)\r\n\r\n    Row[{\r\n        MatrixForm[AT . A], \r\n        MatrixForm[{{b}, {m}}], \r\n        \" = \", \r\n        MatrixForm[AT . B]\r\n    }]\r\n]\r\n\r\nMatEqLeastSqrs[points_] := Module[{A, B, m, b, x},\r\n    (* Construct matrix A where each row is {1, x_i} *)\r\n    A = Transpose[{ConstantArray[1, Length[points]], points[[All, 1]]}];\r\n    \r\n    (* Construct matrix B where each row is y_i *)\r\n    B = points[[All, 2]]; (* Selects All points and its second element. The output is a list {...}*)\r\n  \r\n    ShowMatEqLS[A, B]\r\n]\r\n\r\nMatEqLeastSqrs[points]",
+   "languageId": "wolfram",
+   "outputs": [
+    {
+     "items": [
+      {
+       "data": "<div class=\"wexpr\"><wgraph class=\"resizable\" style=\"width:127.8px;height:22.8px;\" aspect-ratio=\"0.178404\" tabIndex=\"-1\"><img src=\"data:image/png;base64,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\" /></wgraph></div>",
+       "mime": "x-application/wolfram-language-html"
+      }
+     ],
+     "id": "5f163837-da68-41a8-bc32-71c43f14bc8a"
+    }
+   ],
+   "metadata": {},
+   "executionSummary": {
+    "timing": {
+     "startTime": 1746727667315,
+     "endTime": 1746727667451
+    },
+    "executionOrder": 81,
     "success": true
    }
   }

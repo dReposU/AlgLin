@@ -1,0 +1,87 @@
+{
+ "cells": [
+  {
+   "kind": 2,
+   "value": "(* The equation applying least squares to a set of points*)\r\n\r\nEqLeastSqrts[points_] := Module[{A, B, m, b, x},\r\n  (* Construct matrix A where each row is {1, x_i} *)\r\n  A = Transpose[{ConstantArray[1, Length[points]], points[[All, 1]]}];\r\n  \r\n  (* Construct matrix B where each row is y_i *)\r\n  B = points[[All, 2]]; (* Selects All points and its second element. The output is a list {...}*)\r\n  \r\n  (* Apply the LeastSquares method *)\r\n  x = LeastSquares[A, B];\r\n  \r\n  (* Extract b and m *)\r\n  {b, m} = x;\r\n  \r\n  (* Return the equation of the line *)\r\n  b + m*# & (* A function that returns b + mx for any input x *)\r\n]\r\n\r\n(* Test it with the given points *)\r\npoints = {{1, 0.2}, {2, 0.25}, {3, 0.2}, {4, 0.35}, {5, 0.45}, {6, 0.4}};\r\n",
+   "languageId": "wolfram",
+   "outputs": [],
+   "metadata": {},
+   "executionSummary": {}
+  },
+  {
+   "kind": 2,
+   "value": "A = {ConstantArray[1, Length[points]], points[[All, 1]]};\r\nA // MatrixForm",
+   "languageId": "wolfram",
+   "outputs": [
+    {
+     "items": [
+      {
+       "data": "<div class=\"wexpr\"><wgraph class=\"resizable\" style=\"width:88.2px;height:22.8px;\" aspect-ratio=\"0.258503\" tabIndex=\"-1\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJMAAAAmCAIAAABPgD6EAAAAz3pUWHRSYXcgcHJvZmlsZSB0eXBlIGV4aWYAAHjabU9BDgMhCLz7ij4BQQd9jtvVpD/o84sr2camk8jAMKCG/n6N8JjgSCFlLagAGVJNlZslhRYWR6pXvFDFe3HXA8P1ZlL+NtBdP3Zd3c/lZxHxSmTeYLkkH/BFwkuPbdWH+7mVsi0ax7jgDybQ/fS/dRJlZERNFhOTKqrlJVhqhMyUFQNPwIwRJ1N6Gneo2hh0OqTNwQnuurt7gJhwzi/IPFma8YrFRqNxs1qXzufdnd/5AGfTXDn/m4NRAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAPHRFWHRTb2Z0d2FyZQBDcmVhdGVkIHdpdGggdGhlIFdvbGZyYW0gTGFuZ3VhZ2UgOiB3d3cud29sZnJhbS5jb21coqaFAAAAIXRFWHRDcmVhdGlvbiBUaW1lADIwMjU6MDU6MDggMTA6NTc6MDX4SUesAAAD80lEQVR4nO2bvW6rMBSA4eo+BUIRwjxFFGXo4j5C2ilTJZgrsmTMAurcSH2AwpAHaJYOEHXgGWILRVFegztYQlywfbGhFK78DZUKPscHH/8c2yd6URSaYoL8oj7FGHuexxFzHEfX9TiO5WrtKD4GDQMYEIYh5y3dc4fD4fn5maVO1/XdbidqaC/iY9AwmAG+7ydJwnpL91ye57ZtN5/Hcfz5+VkUhWmaQrb2Ij4GDT9uQAnFcxhjy7KopVer1cfHh3RlHcXHoGFgAx4fH1kTJsVzWZbN53N50xT9YRgGa8KkeC5JEsMwvtkkRSts28YYU1/RZ0vqIqf4EVi+oEcoivFgWdbpdGo+r3sOY3x3dzeISYpWzGaz6/XafF73XJZls9lsEJMUrTBN83K5UF4UfxNFUZqmBQOEUFMDAIBVvl/xMWgY3gCEkOu6zee/ayoulwtnh2jbdtHhnLOj+Bg0DG9A2wglz3O1JRgb1I2Bii2nCiW2VJu5SaDG3ASgjiXluQmg1rn/CuW5qaI8N1WU5yaAilCmSqsIhXOVpxgVkmNOOmcNY6xXkK6a4DiOhIaS+/t7Xdf5+Yl8Awhyfd3zvC4a6p6zLOt2u3EEuuSsYYwBAOVdBABAounP53N5Xu44jrTz4jg+Ho9yskEQVI/tRU+dSPfVKhc1EudWdc/xL+c6ZpyRY/LFYkH+3e12CCHqhW9L1us1Qkiuy2+32yAIAADStUvjeZ7ruq+vr20Ks84j654zTZN6A0vonrNWq6sXPRIdNgxDhJDv+70YIATG+Hg8shKRm9xuN2oSZd1zhmHQb2C/ga+vL1KjtIaHh4cgCESlMMabzSaKIul6N5uN9FKdZRn5W2rgL7TX65U6EVJiyzzPRa2RgDQfhFBixJQxAgBAYty8vLxACFerlaggobrQQghF4wsyMJIkKa+89/t9GIac8tTJiZ61194OacgCIzf3lm339PSk67rQSnk6nfb7/Xa7lai3CbH/cDiICpaLnG3bruu+vb2xSuZ5XkYGVSieG+B+jgSE1IwMIXzfBwC8v7+3F1mv167rUttCGqFZqjn1sX4LQBDIlF0ul13ivX/iOA5CCCHUVxfhf3kVjDGZnco1pvyXM1/xFWqatlwu24uQqa/awnmec/Y2zFaiJhvV9itN0jTVNC2KIn6xJhBCTdM46WVCuK5L/YT2AAComVUt0TQNQigqBSEsk71IS7IaJE1TViPTP5v1MR1z1oiV0uJNA7o0OkHCc1UDJPougfRgAkKIVSwIAtbbetYegTX/dMxZWywWXcS7G9DkfD6LivRiQMvQjPVDRo11bjmfz0VP8xS9E4YhZwXV++3CisH4A3SGKGwvrGKPAAAAAElFTkSuQmCC\" /></wgraph></div>",
+       "mime": "x-application/wolfram-language-html"
+      }
+     ],
+     "id": "43172da5-cc8e-43e9-b61e-c73742209e68"
+    }
+   ],
+   "metadata": {},
+   "executionSummary": {
+    "timing": {
+     "startTime": 1746719824992,
+     "endTime": 1746719825239
+    },
+    "executionOrder": 9,
+    "success": true
+   }
+  },
+  {
+   "kind": 2,
+   "value": "A = Transpose[A]; (* Transpose the matrix A *)\r\nA // MatrixForm",
+   "languageId": "wolfram",
+   "outputs": [
+    {
+     "items": [
+      {
+       "data": "<div class=\"wexpr\"><wgraph class=\"resizable\" style=\"width:36.0px;height:76.8px;\" aspect-ratio=\"2.13333\" tabIndex=\"-1\"><img src=\"data:image/png;base64,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\" /></wgraph></div>",
+       "mime": "x-application/wolfram-language-html"
+      }
+     ],
+     "id": "8f0be7af-dba4-4bed-8433-9165a50e7691"
+    }
+   ],
+   "metadata": {},
+   "executionSummary": {
+    "timing": {
+     "startTime": 1746719836832,
+     "endTime": 1746719836969
+    },
+    "executionOrder": 12,
+    "success": true
+   }
+  },
+  {
+   "kind": 2,
+   "value": "B = points[[All, 2]]; \r\nB // MatrixForm",
+   "languageId": "wolfram",
+   "outputs": [
+    {
+     "items": [
+      {
+       "data": "<div class=\"wexpr\"><wgraph class=\"resizable\" style=\"width:40.2px;height:76.8px;\" aspect-ratio=\"1.91045\" tabIndex=\"-1\"><img src=\"data:image/png;base64,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\" /></wgraph></div>",
+       "mime": "x-application/wolfram-language-html"
+      }
+     ],
+     "id": "1874ea60-ecac-48a4-af7b-0e5f34f83716"
+    }
+   ],
+   "metadata": {},
+   "executionSummary": {
+    "timing": {
+     "startTime": 1746719855550,
+     "endTime": 1746719855688
+    },
+    "executionOrder": 15,
+    "success": true
+   }
+  }
+ ]
+}
