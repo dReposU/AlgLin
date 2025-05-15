@@ -1,0 +1,52 @@
+{
+ "cells": [
+  {
+   "kind": 1,
+   "value": "P0 = (0, 0); P1 = (1, 0); P2 = (2, 1)  \r\n(2t, t^2)  \r\ny = x^2 / 4",
+   "languageId": "markdown",
+   "outputs": [],
+   "metadata": {},
+   "executionSummary": {}
+  },
+  {
+   "kind": 2,
+   "value": "BezierCurveFunction[points_List] := \r\n    Function[t, \r\n        Module[{n = Length[points] - 1, bernstein, x, y},\r\n            bernstein[i_, n_, t_] := Binomial[n, i] * t^i * (1 - t)^(n - i);\r\n            x = Sum[bernstein[i, n, t] * points[[i + 1, 1]], {i, 0, n}];\r\n            y = Sum[bernstein[i, n, t] * points[[i + 1, 2]], {i, 0, n}];\r\n            {Simplify[x], Simplify[y]}\r\n        ]\r\n    ]",
+   "languageId": "wolfram",
+   "outputs": [],
+   "metadata": {},
+   "executionSummary": {
+    "timing": {
+     "startTime": 1747344258227,
+     "endTime": 1747344258239
+    },
+    "executionOrder": 17,
+    "success": true
+   }
+  },
+  {
+   "kind": 2,
+   "value": "BezierCurveFunction[{{0, 0}, {1, 0}, {2, 1}}][t]",
+   "languageId": "wolfram",
+   "outputs": [
+    {
+     "items": [
+      {
+       "data": "<div class=\"wexpr\"><wgraph class=\"resizable\" style=\"width:46.2px;height:14.4px;\" aspect-ratio=\"0.311688\" tabIndex=\"-1\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAE0AAAAYCAIAAAAwKOejAAAA0npUWHRSYXcgcHJvZmlsZSB0eXBlIGV4aWYAAHjabU9tbsUgDPvPKd4R8oUDx6GvVNoNdvyXFLSp0yw1Nk6cQpnfX1d5JYSpWPWGDlDAunUZIRotLGbqd71h5+7x0y+8QzzCqr8NzO0fT9+xWNqfRSRLaP4htNoO7EUqy+exzseel9HaY9F1XDf2hQn0c/V/z6YuqGC3qCbkjh66lZBBqELVceENxCDjFLJ38IR7xOA5oSODCZn+nJ4FGsaZT9D8qo7grKwZZUVoUbsrybm7pPmcD6mpXGF/iC6oAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAPHRFWHRTb2Z0d2FyZQBDcmVhdGVkIHdpdGggdGhlIFdvbGZyYW0gTGFuZ3VhZ2UgOiB3d3cud29sZnJhbS5jb21coqaFAAAAIXRFWHRDcmVhdGlvbiBUaW1lADIwMjU6MDU6MTUgMTY6MjQ6MjBNIMMVAAAB7ElEQVRYheWYQXLCMAxFk05PwSoT+xgMS5wrwA2sA4RNlmzCAcwRuAKsw7DgDEjDTdSFZ9LUMcahJaXTtwLhCGksf8lJmTn5B7z1TVLKNE2JaPxoIrERpml6PB67dmv0P8Nf0VojIr8wdV3Xdc3MTdP042dmIUTf+O6kTUR5nj9nG36Gsizth8lk4l0wn8/7Rk/d/hXO57NSKnJxVJ5ElHYILwaAoigi//5hP0S0WCyMMZHe7udJREKIpmna6pdSxgb7HNqQ4o/Y/TzzPGfm6XRqv67Xa0R0hG5M2iTbkKJwdEkpFZY7q3Lt9nbx+rfaOIiwH6112L/Wuu/T1du7nE6n5IbW2RABgIj2+/1Qz5F+jDHxx7LFrdtwxRPRarVSSr1y78myrD/kfMkTAJbLZcCFECJJku/s1QiUZQkAjvEzTwDYbreBw21lFhGfFN/P4jSFzzyNMcx8q2VJKREREV+5Yi2bzaaqqsvl0jVGzQlFUSBiZL/KsuxwONxqPN75+wE/Aa7Xq6cqHf3t9xXbSBy8s3JX2duVju7bSc0r/YP8hJ/qGwf3z2+y2+0GBf0A3jzHnuOrqko6d47RGC9PALB3AP6NNxjj5Wn13JHB0fjD989B/Nc8jTG2xb3ye7Bb2Mhns5nnp19RhfH5AMpGtJdBmB4bAAAAAElFTkSuQmCC\" /></wgraph></div>",
+       "mime": "x-application/wolfram-language-html"
+      }
+     ],
+     "id": "26d06efc-8525-48ca-b854-f2197a84953a"
+    }
+   ],
+   "metadata": {},
+   "executionSummary": {
+    "timing": {
+     "startTime": 1747344259973,
+     "endTime": 1747344260061
+    },
+    "executionOrder": 18,
+    "success": true
+   }
+  }
+ ]
+}
