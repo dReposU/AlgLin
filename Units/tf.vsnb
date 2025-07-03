@@ -24,14 +24,7 @@
     }
    ],
    "metadata": {},
-   "executionSummary": {
-    "timing": {
-     "startTime": 1751575644457,
-     "endTime": 1751575647493
-    },
-    "executionOrder": 4,
-    "success": true
-   }
+   "executionSummary": {}
   },
   {
    "kind": 2,
@@ -49,10 +42,28 @@
     }
    ],
    "metadata": {},
+   "executionSummary": {}
+  },
+  {
+   "kind": 2,
+   "value": "f[x_, y_] := 18000 x + 12000y;\r\n\r\np = {\r\n    {3, 3},\r\n    {10, 10},\r\n    {12, 6},\r\n    {0, 12},\r\n    {6, 0}\r\n};\r\n\r\nf @@@ p",
+   "languageId": "wolfram",
+   "outputs": [
+    {
+     "items": [
+      {
+       "data": "{90000, 300000, 288000, 144000, 108000}",
+       "mime": "text/html"
+      }
+     ],
+     "id": "9ec78d1b-aaf9-4ce5-a3dd-e536bef6c0e9"
+    }
+   ],
+   "metadata": {},
    "executionSummary": {
     "timing": {
-     "startTime": 1751575650481,
-     "endTime": 1751575650620
+     "startTime": 1751579926078,
+     "endTime": 1751579926159
     },
     "executionOrder": 6,
     "success": true
