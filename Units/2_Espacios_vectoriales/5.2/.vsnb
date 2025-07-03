@@ -1,0 +1,253 @@
+{
+ "cells": [
+  {
+   "kind": 1,
+   "value": "# Ejercicio 1",
+   "languageId": "markdown",
+   "outputs": [],
+   "metadata": {},
+   "executionSummary": {}
+  },
+  {
+   "kind": 2,
+   "value": "FullForm[45°]",
+   "languageId": "wolfram",
+   "outputs": [
+    {
+     "items": [
+      {
+       "data": "<div class=\"wexpr\"><wgraph class=\"resizable\" style=\"width:96.0px;height:12.6px;\" aspect-ratio=\"0.13125\" tabIndex=\"-1\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAAAVCAIAAABOqnK8AAAAz3pUWHRSYXcgcHJvZmlsZSB0eXBlIGV4aWYAAHjabU9bDsMgDPvnFDtCSIIDx6EtSLvBjr9Q2KpOs0RsnAchtNezh8cARwqaLKMA5NCihauLTBOTI5Uznqgr5febH2JafnUrXQm05W933zCZ888g4ilkvOBadDWsQcLTj2uVbdVzzfk2qG/9xGdjXKv/vasYIyGaelQmMxTXObh0QmJKho4d8MKIg0l35wYzb4ONCqmjcYCb3atbgLhxjC/IOEmq84zg6VaP5jGK8PHNju+8AZs7XFeIE26/AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAPHRFWHRTb2Z0d2FyZQBDcmVhdGVkIHdpdGggdGhlIFdvbGZyYW0gTGFuZ3VhZ2UgOiB3d3cud29sZnJhbS5jb21coqaFAAAAIXRFWHRDcmVhdGlvbiBUaW1lADIwMjU6MDU6MDYgMjA6Mjc6MTMqVziYAAADyklEQVRoge2aP070OhDAJxwDIYTWOQUKDY1zhKWjdQ6Am5TbJAcgEhUVm4IDrFPQJKLgDLFFgbiGXzFi5Of82RB2972Pb38Vscee8Yw9Hq8IrLVw5Pdy8l8bcGS/HAP8yzkG+JczNcBN0wRBEMfxXq05snNOACAMw6APYwzJfXx8HN44MmxIII7jIAiSJKGWsiy9Vbi900mSxJ0kDMM5CzggQ746AYC2ba211lohBGPMfrFYLEhuuVxaazebzYGNRkt6e8uyVEr1dlmH+/v7edpdV6D7mqaZN9UBwCAKIbz2P/gOTtM0yzLG2AF0bTYbzvlqtTqArt2yPcB4+/amuziO8zzH3Z3nOaY19542xriJzpvZS4PfsjvPc6313d3dt0b9hOvra6UUXVuuW7oJvHvf4enHUcYYWrtX1rg+yfPc7Rp35hDbAxxFEaap3rMipVytVlmWSSkBoK5r8oIxhjFW1zXlf9esJEmqqnJz6USLcWYp5Xq9HhIY8tFPuLy8BIDPz08AaJrm6upKa00J3I1xEARCCOzKsgwAtNZRFJEAY+zi4sJaq7VWSpVlie1JkhhjcKDWWkpJ9o87cwzXxd4d7MEYI7sRzjnK0zLqugYAtEMI4ckDwHq9prGc8yFdJNPbLoSgrq5VBBoz1DtO1xXu0jjnWZZRl9aauty/u584iTuW7EdJ2jTWWryAyJ4RZ7pmey0/vYPdnesWZQBQVVVRFENZJU1TpdSM5Nw0TVEUaZpulYyiKMuyoii+Nf8UlFJSSlqXm9vQCU9PT/j5/PwMAKenp+5wTAZI27ZYBr69vQEAY4ymxaSIjDtzhP0WWd0NtVwusQszP27bb1l8e3srhHAz3lbc995sXl9fAYD0uqcQoS7GGAVDSqm19rb+CO4Jtta2bUtdI84cYY8BDsOwqqpxmcViQQlnyn1pjNFau3uZPnuHv7+/M8am+3eEh4cHeoQwxl5eXnrFyrL0gjRR+9nZGXyd4y5TnNnLHgOcpqnWesrvDHjCzs/Pt0rShujeYd2KOs/zoigeHx+9dresnUgYhlprelKvViulVO+WwjjNeDFHUcQ5v7m56c03053p413R3SKr+3aGr0xChRIWWfbflQh99qrzavJuvWCHi6zeACNoCTJUMHLOYVvx5a26m5C9Gt7V1fUYDff8M2Rbr94RZ7qqvZYeof8PUwI8A4xNN2Y7AaPrttATYx/qutq9lj/4l6zZYAV+sB9J8LbeSR0whwNsq9lQGt/VhHi8Rt76O8FLs/tWhwz5KrDHf9n51fyNKfqv4h97JiZ6pEgL2QAAAABJRU5ErkJggg==\" /></wgraph></div>",
+       "mime": "x-application/wolfram-language-html"
+      }
+     ],
+     "id": "4e88105d-5cae-41b3-80e8-5f6acc1b56b8"
+    }
+   ],
+   "metadata": {},
+   "executionSummary": {
+    "timing": {
+     "startTime": 1746581232974,
+     "endTime": 1746581233075
+    },
+    "executionOrder": 38,
+    "success": true
+   }
+  },
+  {
+   "kind": 1,
+   "value": "![alt text](../../../assets/5.2img1.png)",
+   "languageId": "markdown",
+   "outputs": [],
+   "metadata": {},
+   "executionSummary": {}
+  },
+  {
+   "kind": 2,
+   "value": "MagAplusB[a_, b_, ang_] := Module[\r\n    {},\r\n    Sqrt[\r\n        a^2 + b^2 + 2 a b Cos[ang]\r\n    ]\r\n]\r\n\r\nMagAplusB[4, 2 Sqrt[2], 45 Degree]\r\nMagAplusB[4, 2 Sqrt[2], 45°]",
+   "languageId": "wolfram",
+   "outputs": [
+    {
+     "items": [
+      {
+       "data": "<div class=\"wexpr\"><wgraph class=\"resizable\" style=\"width:30.6px;height:12.6px;\" aspect-ratio=\"0.411765\" tabIndex=\"-1\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAAVCAIAAABkNkFWAAAAzXpUWHRSYXcgcHJvZmlsZSB0eXBlIGV4aWYAAHjabU/bDQMhDPtnio4QkuDAOFwPpG7Q8RsOdBVVLWEH5wWhvV89PAY4UtBkGQUghxYtXD3INDE1Urn4gsjKxd0PMS2/upW+CbTlH7tvmMr5ZxDx2jQ2eCy6GtYg4enHOu/Hquea8zaoH/3CejCB7qf/vasYIyGaOiuTGYrHOXjogsSUDB1PwAsjTiZ9ujaYeRtsVEgdjQPcbK9uAeLGOb4g4ySprpPB063OdrHyeWfHdz5b3FwuuC+inAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAADx0RVh0U29mdHdhcmUAQ3JlYXRlZCB3aXRoIHRoZSBXb2xmcmFtIExhbmd1YWdlIDogd3d3LndvbGZyYW0uY29tXKKmhQAAACF0RVh0Q3JlYXRpb24gVGltZQAyMDI1OjA1OjA2IDIwOjI3OjI0nx7++AAAAkxJREFUSIm1lrHv6VAUx09fDAaDWUxuB4nFZhERSzuQ2FRiF5tB1B8gEQz+AqlBUhKDUTdJG2yMHbTYbZja5P6Gvtd3X/Xn13Dfd2pvz/2eT0/PuSmDMQaqOhwOy+Xy7e3pdLpcLgMAYNpqtVq32+1zn1/UavVHtm1HIpHPfSiT3e/3cDhMxYoy2W63y2QyVKwok2mals/nqVj9JjNNkyH0tt3j8YhGo+QKy7IMw8xmM08kmZHneX8y0zQRQqqqOkOBEGJZ9g0s27bJ28FgwDBMt9t9jtQ0DSEky7KTUVEUH7jncZVlGQBc0ODabrduMlmWOY7DGKuqCgDuuiOO4xqNhiejYRg/nBrxeDxIha7Xq2dlt9tls1nnWhCE1Wr13V5FUXK5nHs7mUwAYLFYkDE+ZJvNBgBisdh3vsfjsVqtlkolz+e7XC5B3krTNCDen2XZQqGAEDqfz6/ITNMURZHjuEQi4etr2/Z4PB4Oh/V6fTqd/sjxWk4jttvt50deMoQQALz4EKFQqNfrxePxWq02n8/dsum6nkqlgjNtNhuGYVRVFQTBN+AfMmckDcMIYh0KhSqVilu29XrtNtlrOX0iiqJhGO4WwzDIzgMgZtOplmdAXsuyLJ7nLcvCGHc6Hd8Y39lECJGz6cR4UoM7xvDWSSFJkiRJGONmsxmczDkm3EUAIEH/kjmbPUIIBSFzynY6nUajEbnu2xKkJ5m03+8/O1P4P5MkqVgs7vf7z61IUSCzLCudTn/u4xGDafxt67qeTCY/9yFFh+x/6AsoG0f1FpKXsQAAAABJRU5ErkJggg==\" /></wgraph></div>",
+       "mime": "x-application/wolfram-language-html"
+      }
+     ],
+     "id": "53e9797d-9394-4449-a711-ae152c71fc7a"
+    },
+    {
+     "items": [
+      {
+       "data": "<div class=\"wexpr\"><wgraph class=\"resizable\" style=\"width:30.6px;height:12.6px;\" aspect-ratio=\"0.411765\" tabIndex=\"-1\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAAVCAIAAABkNkFWAAAAzXpUWHRSYXcgcHJvZmlsZSB0eXBlIGV4aWYAAHjabU/bDQMhDPtnio4QkuDAOFwPpG7Q8RsOdBVVLWEH5wWhvV89PAY4UtBkGQUghxYtXD3INDE1Urn4gsjKxd0PMS2/upW+CbTlH7tvmMr5ZxDx2jQ2eCy6GtYg4enHOu/Hquea8zaoH/3CejCB7qf/vasYIyGaOiuTGYrHOXjogsSUDB1PwAsjTiZ9ujaYeRtsVEgdjQPcbK9uAeLGOb4g4ySprpPB063OdrHyeWfHdz5b3FwuuC+inAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAADx0RVh0U29mdHdhcmUAQ3JlYXRlZCB3aXRoIHRoZSBXb2xmcmFtIExhbmd1YWdlIDogd3d3LndvbGZyYW0uY29tXKKmhQAAACF0RVh0Q3JlYXRpb24gVGltZQAyMDI1OjA1OjA2IDIwOjI3OjI0nx7++AAAAkxJREFUSIm1lrHv6VAUx09fDAaDWUxuB4nFZhERSzuQ2FRiF5tB1B8gEQz+AqlBUhKDUTdJG2yMHbTYbZja5P6Gvtd3X/Xn13Dfd2pvz/2eT0/PuSmDMQaqOhwOy+Xy7e3pdLpcLgMAYNpqtVq32+1zn1/UavVHtm1HIpHPfSiT3e/3cDhMxYoy2W63y2QyVKwok2mals/nqVj9JjNNkyH0tt3j8YhGo+QKy7IMw8xmM08kmZHneX8y0zQRQqqqOkOBEGJZ9g0s27bJ28FgwDBMt9t9jtQ0DSEky7KTUVEUH7jncZVlGQBc0ODabrduMlmWOY7DGKuqCgDuuiOO4xqNhiejYRg/nBrxeDxIha7Xq2dlt9tls1nnWhCE1Wr13V5FUXK5nHs7mUwAYLFYkDE+ZJvNBgBisdh3vsfjsVqtlkolz+e7XC5B3krTNCDen2XZQqGAEDqfz6/ITNMURZHjuEQi4etr2/Z4PB4Oh/V6fTqd/sjxWk4jttvt50deMoQQALz4EKFQqNfrxePxWq02n8/dsum6nkqlgjNtNhuGYVRVFQTBN+AfMmckDcMIYh0KhSqVilu29XrtNtlrOX0iiqJhGO4WwzDIzgMgZtOplmdAXsuyLJ7nLcvCGHc6Hd8Y39lECJGz6cR4UoM7xvDWSSFJkiRJGONmsxmczDkm3EUAIEH/kjmbPUIIBSFzynY6nUajEbnu2xKkJ5m03+8/O1P4P5MkqVgs7vf7z61IUSCzLCudTn/u4xGDafxt67qeTCY/9yFFh+x/6AsoG0f1FpKXsQAAAABJRU5ErkJggg==\" /></wgraph></div>",
+       "mime": "x-application/wolfram-language-html"
+      }
+     ],
+     "id": "11ceb80d-faa9-4db5-a325-0f4f37a09661"
+    }
+   ],
+   "metadata": {},
+   "executionSummary": {
+    "timing": {
+     "startTime": 1746581244049,
+     "endTime": 1746581244275
+    },
+    "executionOrder": 47,
+    "success": true
+   }
+  },
+  {
+   "kind": 1,
+   "value": "# Ejercicio 2",
+   "languageId": "markdown",
+   "outputs": [],
+   "metadata": {},
+   "executionSummary": {}
+  },
+  {
+   "kind": 1,
+   "value": "+ [Cross product](https://reference.wolfram.com/language/ref/Cross.html?q=Cross)",
+   "languageId": "markdown",
+   "outputs": [],
+   "metadata": {},
+   "executionSummary": {}
+  },
+  {
+   "kind": 2,
+   "value": "Cross[{a, b, c}, {2, 3, 4}]",
+   "languageId": "wolfram",
+   "outputs": [
+    {
+     "items": [
+      {
+       "data": "<div class=\"wexpr\"><wgraph class=\"resizable\" style=\"width:154.2px;height:12.6px;\" aspect-ratio=\"0.0817121\" tabIndex=\"-1\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQEAAAAVCAIAAADJvsyTAAAAz3pUWHRSYXcgcHJvZmlsZSB0eXBlIGV4aWYAAHjabU9bDsMgDPvnFDtCSIIDx6EtSLvBjr9QULdOs0TsOI82ob2ePTwGOFLQZBkFIIcWLVxdZJqYHKmckVYWL/7yQ0yrXt1KnwLa8re7b5jM+WcR8RQyvuBadA2sRcLTj3Xm2+rnmvNtUd/6ifXjBLpO+JurGCMhmnpUJjMU1zm4dEJiSoaOHfDGiINJd+cGMx+DjQ6pY3CAm927W4C4cYwTZLwk1XlG8HSriHP1p3xc1XHOG1WdXCYI+2GGAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAPHRFWHRTb2Z0d2FyZQBDcmVhdGVkIHdpdGggdGhlIFdvbGZyYW0gTGFuZ3VhZ2UgOiB3d3cud29sZnJhbS5jb21coqaFAAAAIXRFWHRDcmVhdGlvbiBUaW1lADIwMjU6MDU6MDYgMjA6MzI6MjSVoCd6AAADkklEQVRoge2bMXKrMBCGxTtHigziFBlPihSRrxBXrjIDdcZpXLrBkzq+QfARnNpMipzB4ir7ip3oKQjECmScPPR1gCxp/921tMKOAIAFAhPmz6UnEAhcmJADgakTciAwdXzmQFmWURSVZemxz0CAwpDYq+dAVVVRFCVJ0th6Pp9HUZRlWY+R+pEkSfRF26wuyPiCoIMU4wx6QS/4sjfLsrYkqefAy8sLAJxOJ7Ppfr9/f3/vPYl+nE4n+CJJkh+VBuMLUlUV5/x4PKIgnPNxBLmUFzza+/r6CgCbzcZ81LAOtPWyXq/zPOec95vEcJbLpZTSMsORGV+QOI4BYDab4eVms5FSjrz5HNML3u2N49i8Sa0HttutlHK1WlEaq6XzHJuERjMQfd2cz+feh9ahC4L7JWS73Xqcw9XVlb3B+QRp88L5jGUEe1m/2IPvCCHAQErJGCuKAtejNE3NNgBwPB6xT2ypf8oLjLE8z9ueFkWhD1cUhcehaxAFAQAhhFrKUR912YilK5M8zxljUsrGp2cSxOIFV2NdsdhLjL1GeUk5kKaput+ZA/rAQojGDp1Qmw3Oub2ZUwANgSiIiT2NwSUH0M0Wef0KQvSCTqexTtjtJcZeoyDf9kL7/f7u7q62UJRludvt1us1cWHRF6w4jhvLa33F7Cz5VUH2+PjYVtpXVSWlXCwWxEnasU/PSZDzHeNgUB4Oh7ZxPQrCyF4gGusUAIjdXqQz9haLhblD+5cDZVk+PDzc3NzUWiyXyzRNVV3ihcPhYKZj56dWqxXn/O3tzeNMekyPLggea+jfPW0tVUzsdjtKTODxCH41jkybF+jGMvcA8GXvbDZ7fn6upcEf/TEA1GzDrxPdMeqSUvFUVXV/fz9w3jWur6/Nm1iifXx8+B3LxEmQz89PxtjT01NntyomKDGUJImUUkppOR44tyCmF+jGukKx16Qx9rIsA4D6SUYtFzu37531gCqD7BVbD9I0NSeswOH0mqxWEqG9fqs0cCmQcAID6wEhBNGKTkGglyZtXuhhLAWivcTY618T69grrVra2bvqpLb2dcYHnoQgpiGopve62S4IOkOFmhBiSA6o0w8dS5FqFwRomtC94GpsJ072UmLPTw78XjAgPJ5U/AdMTZPucyFmfQP128GTHOJrvokQNGHme+Lb29voR/46bQj4eynGGIQ/zX0xNU2UvSbRRCQIBNoI/6EJTJ2/zQDvcndnisUAAAAASUVORK5CYII=\" /></wgraph></div>",
+       "mime": "x-application/wolfram-language-html"
+      }
+     ],
+     "id": "7519ed95-0ce7-44ff-9282-53e5175f2ab9"
+    }
+   ],
+   "metadata": {},
+   "executionSummary": {
+    "timing": {
+     "startTime": 1746581544851,
+     "endTime": 1746581545009
+    },
+    "executionOrder": 51,
+    "success": true
+   }
+  },
+  {
+   "kind": 1,
+   "value": "![alt text](../../../assets/5.2img2.png)",
+   "languageId": "markdown",
+   "outputs": [],
+   "metadata": {},
+   "executionSummary": {}
+  },
+  {
+   "kind": 1,
+   "value": "![alt text](../../../assets/5.2img3.png)",
+   "languageId": "markdown",
+   "outputs": [],
+   "metadata": {},
+   "executionSummary": {}
+  },
+  {
+   "kind": 1,
+   "value": "+ [Norm func](https://wolfram.com/xid/0bufmu-vof). The [||v||](https://wolfram.com/xid/0bufmu-dioeom) symbol",
+   "languageId": "markdown",
+   "outputs": [],
+   "metadata": {},
+   "executionSummary": {}
+  },
+  {
+   "kind": 2,
+   "value": "AreaTriangle3Point[A_, B_, C_] := Block[\r\n    {\r\n        u, v\r\n    },\r\n    u = A - C;\r\n    v = B - C;\r\n\r\n    1/2 * Norm[Cross[u, v]]\r\n]\r\n\r\nAreaTriangle3Point[{2, 0, 3}, {1, 4, 0}, {4, -3, 2}] == 1/2 * Sqrt[243]",
+   "languageId": "wolfram",
+   "outputs": [
+    {
+     "items": [
+      {
+       "data": "<div class=\"wexpr\"><wgraph class=\"resizable\" style=\"width:23.4px;height:12.6px;\" aspect-ratio=\"0.538462\" tabIndex=\"-1\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACcAAAAVCAIAAABKc2DEAAAAz3pUWHRSYXcgcHJvZmlsZSB0eXBlIGV4aWYAAHjabU9bDgMhCPz3FD0Cgg56HLerSW/Q4xdXso1NJxGG4SGE/n6N8JjgSCFlLagAGVJNlZuRQgvLR6qXvcDqubjrIWbXm0n5m0B3/dh1hQ8sP4OIF5H5g3FJ3uCDhJce24oPr+dWyjZoHOOCL0yge/W/cRJlZERNZhOTKqrxEoyaQ2bKioEnYIURJ1N6mu9QtTborJA2Gye4617dA8SEc54g82Vp5pdVazVrPF4KS+Hzzs5zPmDsXDjhZfyxAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAPHRFWHRTb2Z0d2FyZQBDcmVhdGVkIHdpdGggdGhlIFdvbGZyYW0gTGFuZ3VhZ2UgOiB3d3cud29sZnJhbS5jb21coqaFAAAAIXRFWHRDcmVhdGlvbiBUaW1lADIwMjU6MDU6MDcgMDc6MTU6MjgTQVJFAAABAUlEQVRIie2Vz42FIBDGv9lsFR6FGjxRgCV49Io1WIHxLB0oNXCF2AW0wh5ICHn7NuvmPc0e/E5MZoZfMn+AYoy4XB/XI2/qRVTOOT1TCOEsbCwkpWSMxfP1X/uqtSYiAG3bpsoPw5Bczjkics7lYCKapimbIYSyZX+g5uv6vo8xWmuVUiXpJ4UQGGPW2ty+DD5K3bat6zoAQggA+77/mjLPs5QyxQNYlgWA1hrA50Fq0zT5fPARNcZ475VS313nTpOU8mF6U8FeolZVVZoP+805N8Y8TXyJWtc1gHVdk8kYK73jOHrv88C/jQogjXRaDGttCRZClN5yeej+X2/q2/QF40ffNyNlVmYAAAAASUVORK5CYII=\" /></wgraph></div>",
+       "mime": "x-application/wolfram-language-html"
+      }
+     ],
+     "id": "850be742-1436-4b56-9e55-1ad36f4046a8"
+    }
+   ],
+   "metadata": {},
+   "executionSummary": {
+    "timing": {
+     "startTime": 1746620128160,
+     "endTime": 1746620128259
+    },
+    "executionOrder": 60,
+    "success": true
+   }
+  },
+  {
+   "kind": 1,
+   "value": "![alt text](../../../assets/5.2img4.png)",
+   "languageId": "markdown",
+   "outputs": [],
+   "metadata": {},
+   "executionSummary": {}
+  },
+  {
+   "kind": 2,
+   "value": "VolParall[u_, v_, w_] := Block[ (* Volume of a Parallelepiped*)\r\n    {},\r\n    Abs[Cross[u, v] . w]\r\n]\r\n\r\nVolParall[{1, 2, 3}, {3, 3, 2}, {2, 2, 2}]",
+   "languageId": "wolfram",
+   "outputs": [
+    {
+     "items": [
+      {
+       "data": "2",
+       "mime": "text/html"
+      }
+     ],
+     "id": "9d465970-f02e-45ad-9615-2c4cb4bd84bd"
+    }
+   ],
+   "metadata": {},
+   "executionSummary": {
+    "timing": {
+     "startTime": 1746621726884,
+     "endTime": 1746621726972
+    },
+    "executionOrder": 70,
+    "success": true
+   }
+  },
+  {
+   "kind": 1,
+   "value": "+ [Reduce func](https://reference.wolfram.com/language/ref/Reduce.html?q=Reduce). Reduce[*expr*, *vars*, *dom*]",
+   "languageId": "markdown",
+   "outputs": [],
+   "metadata": {},
+   "executionSummary": {}
+  },
+  {
+   "kind": 2,
+   "value": "FindXParall[a_, b_, c_, var_, vol_] := Module[\r\n    {\r\n        eq\r\n    },\r\n    eq = VolParall[a, b, c];\r\n    (* Solve[eq == vol, var] Solve::ifun: (...) some solutions may not be found (...) *)\r\n    Reduce[eq == vol, var, Reals]\r\n]\r\n\r\nFindXParall[{2, -1, -3}, {-1, 1, -4}, {x + 1, x, -1}, x, 42]\r\n%[[1, 2]]\r\n% + 8/3",
+   "languageId": "wolfram",
+   "outputs": [
+    {
+     "items": [
+      {
+       "data": "<div class=\"wexpr\"><wgraph class=\"resizable\" style=\"width:78.6px;height:23.4px;\" aspect-ratio=\"0.29771\" tabIndex=\"-1\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIMAAAAnCAIAAACjcmzJAAAAz3pUWHRSYXcgcHJvZmlsZSB0eXBlIGV4aWYAAHjabU/bDQMhDPtnio4QkuDAOFwPpG7Q8RsOdBVVLRE7zgMI7f3q4THAkYImyygAObRo4eoi08TkSOWK05JVi7sf2JZf3UrfAtryj903TOb8s4h4Chk3uBZdA2uR8PRjnfmx+rnmvC3qR7+wHkyg++l/cxVjJERTj8pkhuI6B5dOSEzJ0PEEvDHiZNKnc4OZj8FGh9QxOMDN9u4WIG6c4wsyTpLqPKP5KEm+dPSokvi8q+M7H2elXDgQm63UAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAPHRFWHRTb2Z0d2FyZQBDcmVhdGVkIHdpdGggdGhlIFdvbGZyYW0gTGFuZ3VhZ2UgOiB3d3cud29sZnJhbS5jb21coqaFAAAAIXRFWHRDcmVhdGlvbiBUaW1lADIwMjU6MDU6MDcgMDg6MDE6NDV/4EdwAAAC6UlEQVRoge2bMa7iMBCGJ0+cAiGEYrdcAKXGFJQ0UFEhJQcA0dPkiRpOgMIRoE7EEbaKI4QQN6D2FhbeECC8XcCZTfJVSYycyfwZz9gmhhACShDwlbUB96GUGhe+v7+zNkcHGJWglLbbbSGEEML3/clkUgQx0CkRBAHnfDAYyFPLshhj+/0+U6N0gE6JarUKAMfjUV0Jw7DRaGRmkDYEPmzbBgDXdYUQhBCcRr4dpA/p+758URhjWduiCYxKyJjgnItLhS2P8w06JTzPAwDf99UVQkgRIgNdxj4cDnDJ2xJKaRiG2VmkCXRKtFotAJjP5/I0iqLtdttutzM1SgtZB+UdVLqWyCIq9xiiXHfCAbrRqbDkSgnHcVJa1+t1EATajLlLFEVGjHhTrpRAThRFhBBVoBNCKKWqtVRCH6ZpCiEsy5Kns9mMc67C9AsAHMdJbAPI2ImiSL+5WaHfCbVaLX5aAYDFYgEAk8mk1+uZpilH26LVVPqdsNvtID6HVfUsY4wQcrvYkIAxpvpijCVqf8/z/rmgPp/Pvx5zOp2e9mDbdkqr53kpzyX5oRPEy37gnMP1+ubVfEJmc9d1x+Pxe/XvdDrb7TZxUVy/cYfDYbVaPeqh2Wx2u930uziOI1/tu6zX61qtpobpR3zOCbd3iXugoo7UgPiJDbLNZvP0N/V6fTqdvv3Wf8VHnaCQJZMMiz+o6AAA27ZllKUE1+dGp9d5fXT6oRPEC36Qe1+36/yg+iWEyGPXdeHZKImTF5XQ4ASp391uQVxUSmwJ/I9ivKKEBick4kaitK8AwO3qfxH2AxJocIJlWeJxWVzOsbFQKoEFjPsTlFJV4RFCCjJUYoyJMAxVlqOUxhcscwxGJeIMh0POeRHWIrErITFNM2sTPg52Jfr9vpxk5R6MGRtiSbvM2BmjkvZoNDIMI/P9Zw0gjYk48sOWlOXufIA0JhIU4fsJ7DHhOM5yuURu5FtAFxO3/wgqggwA8BsDkYvW5RP3XwAAAABJRU5ErkJggg==\" /></wgraph></div>",
+       "mime": "x-application/wolfram-language-html"
+      }
+     ],
+     "id": "068fd756-76d8-4de2-9d98-d249ab3e5a9f"
+    },
+    {
+     "items": [
+      {
+       "data": "<div class=\"wexpr\"><wgraph class=\"resizable\" style=\"width:16.2px;height:23.4px;\" aspect-ratio=\"1.44444\" tabIndex=\"-1\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAnCAIAAABxDqTUAAAAz3pUWHRSYXcgcHJvZmlsZSB0eXBlIGV4aWYAAHjabU9BDgMhCLz7ij4BAQd9jtvVpD/o84ur2camJDLDwKCG9n718BjBkYImyygAeWjRwtVJphkTI5Urz+JYvbjrgW3p1aX0baDdxk03TOT8s4h4Ehk3OBddhrVIeOqxzvpY81xz3hb1o1+xHkyg++l/axVjJERTz8pkhuI8B6cOSEzJ0PEEfDDiZNKnY4OZ22BjQuowjuBm+3QLEBfO8QUZJ0l1nNncSpIvHj2rJD7v7vjOB6KGXGB0/Rf/AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAPHRFWHRTb2Z0d2FyZQBDcmVhdGVkIHdpdGggdGhlIFdvbGZyYW0gTGFuZ3VhZ2UgOiB3d3cud29sZnJhbS5jb21coqaFAAAAIXRFWHRDcmVhdGlvbiBUaW1lADIwMjU6MDU6MDcgMDg6MDE6NDV/4EdwAAABP0lEQVRIie2WMY6FIBCGh8123sCCGIe74B3sX8JR9CK2ttZ6DLAwnsHGgi0mjyC+TRae2ewm/hUCfs4wIzPMWguX6iPhHSEEe6pt23DZRgoRlVI0HscRAJqm8TfEEQkxjqObkVK6D5DivM7zHADWdXUzWuuiKN7yWinlPEXEMyGa6HwHACnleTXRRmOMfaYdjROJXdcFkUHEwNK4yCzL4uJDEkJordMjQyfo0sUY4z+meG29sJCC9LbWMvsX/uub+D+Jnz/ct+97+G94yrKMc34gVlU1DEOwz0/Vbdv6vv+OyDmv65rGd4bfxF8k+i2KEOICotbaXddCiBfQ2Krgi0pjUF0vOMeyLC+zEV5VrhQitTsAgIjn1RSvXXAejwdjbJqmy7y2xwY13cZA7/aPvqhPCybjbJznmXmC4z1P+gIxe/Fu5Ojy6AAAAABJRU5ErkJggg==\" /></wgraph></div>",
+       "mime": "x-application/wolfram-language-html"
+      }
+     ],
+     "id": "ae0b3df3-9b5b-4c73-ba4b-322331bab8ae"
+    },
+    {
+     "items": [
+      {
+       "data": "0",
+       "mime": "text/html"
+      }
+     ],
+     "id": "7bd3c71d-ddc4-4acb-a3f9-48329f77bab4"
+    }
+   ],
+   "metadata": {},
+   "executionSummary": {
+    "timing": {
+     "startTime": 1746622905775,
+     "endTime": 1746622906078
+    },
+    "executionOrder": 124,
+    "success": true
+   }
+  }
+ ]
+}
